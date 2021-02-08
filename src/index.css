@@ -1,13 +1,137 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f1f5f8;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu {
+  height: 100vh;
+  width: 90vw;
+  padding-top: 50px;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #112a42;
+  letter-spacing: 0.1rem;
+  width: fit-content;
+}
+
+.title .underline {
+  display: block;
+  margin: 10px auto;
+  height: 4px;
+  width: 50%;
+  background-color: #c59d5f;
+}
+
+/* Menu items */
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
+}
+
+.menu-item {
+  display: grid;
+  grid-gap: 1rem 2rem;
+  max-width: 25rem;
+}
+
+.photo {
+  display: block;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border: 5px solid #c59d5f;
+  border-radius: 5px;
+}
+
+.item-info header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted grey;
+  padding-bottom: 7px;
+}
+
+.item-info header h4 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  color: #102a42;
+}
+
+.price {
+  color: #c59d5f !important;
+}
+
+.item-text {
+  padding-top: 15px;
+  color: #617d98;
+}
+
+/* categories */
+.btn-container {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-btn {
+  text-transform: capitalize;
+  color: #c59d5f;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  margin: 0 15px;
+  padding: 7px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.filter-btn:hover {
+  background-color: #c59d5f;
+  color: #f1f5f8;
+}
+
+.filter-btn:focus {
+  outline: none;
+}
+
+/* Responsive */
+@media screen and (min-width: 768px) {
+  .menu-item {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+    max-width: 40rem;
+  }
+  .photo {
+    height: 175px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-center {
+    width: 95vw;
+    grid-template-columns: 1fr 1fr;
+  }
+  .photo {
+    height: 150px;
+  }
 }
